@@ -161,7 +161,7 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
-                woo = await xoxo.reply(f'⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
+                woo = await xoxo.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
                 await asyncio.sleep(300)
                 await xoxo.delete()
                 await woo.edit_text("<b>Your Query has been deleted !\n\nVisit our group & search again 👇</b>",
@@ -260,11 +260,11 @@ async def start(client, message):
                 except:
                     return
             neha = await msg.edit_caption(f_caption)
-            await msg.reply(f'⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
+            await msg.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
             await asyncio.sleep(300)
             await msg.delete()
             await neha.edit_text("<b>Your Query has been deleted !\n\nVisit our group & search again 👇</b>",
-                           reply_markup=InlineKeyboardMarkup([InlineKeyboardButton('Search Again' , url=f"https://t.me/{MOVIE_GROUP_USERNAME}")]))
+                           reply_markup = InlineKeyboardMarkup([InlineKeyboardButton('Search Again' , url=f"https://t.me/{MOVIE_GROUP_USERNAME}")]))
 
             return
         except:
