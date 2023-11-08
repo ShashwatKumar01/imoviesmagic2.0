@@ -155,15 +155,15 @@ async def start(client, message):
             if f_caption is None:
                 f_caption = f"{title}"
             try:
-                await client.send_cached_media(
+                xoxo = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
-                await msg.reply_text(f'⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
+                await xoxo.reply_text(f'⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
                 await asyncio.sleep(300)
-                await msg.delete()
+                await xoxo.delete()
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
