@@ -161,10 +161,10 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
-                woo = await xoxo.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
+                d = await xoxo.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
                 await asyncio.sleep(300)
                 await xoxo.delete()
-                await woo.edit_text("<b>Your Query has been deleted !\n\nVisit our group & search again 👇</b>",
+                await d.edit_text("<b>Your Query has been deleted !\n\nVisit our group & search again 👇</b>",
                            reply_markup=InlineKeyboardMarkup([InlineKeyboardButton('Search Again' , url=f"https://t.me/{MOVIE_GROUP_USERNAME}")]))
 
             except FloodWait as e:
@@ -176,10 +176,10 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
-                ha = await lzs.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠',quote=True)
+                m = await lzs.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠',quote=True)
                 await asyncio.sleep(300)
                 await lzs.delete()
-                await ha.edit_text("<b>Your Query has been deleted !\n\nVisit our group & search again 👇</b>",
+                await m.edit_text("<b>Your Query has been deleted !\n\nVisit our group & search again 👇</b>",
                            reply_markup=InlineKeyboardMarkup([InlineKeyboardButton('Search Again' , url=f"https://t.me/{MOVIE_GROUP_USERNAME}")]))
 
             except Exception as e:
@@ -259,11 +259,11 @@ async def start(client, message):
                     f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
                 except:
                     return
-            neha = await msg.edit_caption(f_caption)
+            k = await msg.edit_caption(f_caption)
             await msg.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
             await asyncio.sleep(300)
             await msg.delete()
-            await neha.edit_text("<b>Your Query has been deleted !\n\nVisit our group & search again 👇</b>",
+            await k.edit_text("<b>Your Query has been deleted !\n\nVisit our group & search again 👇</b>",
                            reply_markup = InlineKeyboardMarkup([InlineKeyboardButton('Search Again' , url=f"https://t.me/{MOVIE_GROUP_USERNAME}")]))
 
             return
@@ -294,10 +294,10 @@ async def start(client, message):
         reply_markup=keyboard,  # Use the created keyboard
         protect_content=True if pre == 'filep' else False,
         )
-        ne = await xo.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠',quote=True)
+        k = await xo.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠',quote=True)
         await asyncio.sleep(300)
         await xo.delete()
-        await ne.edit_text("<b>Your Query has been deleted !\n\nVisit our group & search again 👇</b>",
+        await k.edit_text("<b>Your Query has been deleted !\n\nVisit our group & search again 👇</b>",
                            reply_markup=InlineKeyboardMarkup([InlineKeyboardButton('Search Again' , url=f"https://t.me/{MOVIE_GROUP_USERNAME}")]))
 
     except Exception as e :
