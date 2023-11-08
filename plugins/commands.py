@@ -165,7 +165,6 @@ async def start(client, message):
                 await asyncio.sleep(300)
                 await xoxo.delete()
             except FloodWait as e:
-                print(f'An error occure: {str(e)}')
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
                 lzs = await client.send_cached_media(
@@ -286,8 +285,11 @@ async def start(client, message):
         reply_markup=keyboard,  # Use the created keyboard
         protect_content=True if pre == 'filep' else False,
         )
+        print('Hit 1')
         await xo.reply_text('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
+        print('Hit 2')
         await asyncio.sleep(300)
+        print('Hit 3')
         await xo.delete()
     except Exception as e :
         print(f'An error occure: {str(e)}')
