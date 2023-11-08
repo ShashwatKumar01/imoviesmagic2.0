@@ -161,15 +161,21 @@ async def start(client, message):
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
+                await msg.reply_text(f'⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
+                await asyncio.sleep(300)
+                await msg.delete()
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
-                await client.send_cached_media(
+                lzs = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
+                await lzs.reply_text(f'⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
+                await asyncio.sleep(300)
+                await lzs.delete()
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
@@ -247,6 +253,9 @@ async def start(client, message):
                 except:
                     return
             await msg.edit_caption(f_caption)
+            await msg.reply_text(f'⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
+            await asyncio.sleep(300)
+            await msg.delete()
             return
         except:
             pass
@@ -267,13 +276,16 @@ async def start(client, message):
     button = InlineKeyboardButton('▶ Gen Stream / Download Link', callback_data=f'generate_stream_link:{file_id}')
     # Create the inline keyboard markup with the button
     keyboard = InlineKeyboardMarkup([[button]])
-    await client.send_cached_media(
+    xo = await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
         reply_markup=keyboard,  # Use the created keyboard
         protect_content=True if pre == 'filep' else False,
         )
+    await xo.reply_text(f'⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
+    await asyncio.sleep(300)
+    await xo.delete()
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
