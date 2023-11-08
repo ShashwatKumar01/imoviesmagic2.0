@@ -259,10 +259,13 @@ async def start(client, message):
                     f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
                 except:
                     return
-            await msg.edit_caption(f_caption)
-            await msg.reply_text(f'⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
+            neha = await msg.edit_caption(f_caption)
+            await msg.reply(f'⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
             await asyncio.sleep(300)
             await msg.delete()
+            await neha.edit_text("<b>Your Query has been deleted !\n\nVisit our group & search again 👇</b>",
+                           reply_markup=InlineKeyboardMarkup([InlineKeyboardButton('Search Again' , url=f"https://t.me/{MOVIE_GROUP_USERNAME}")]))
+
             return
         except:
             pass
