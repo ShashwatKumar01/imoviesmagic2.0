@@ -678,24 +678,28 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "start":
         buttons = [[
             InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-        ],[
-            InlineKeyboardButton('Join Movie Group', url=f'http://t.me/{MOVIE_GROUP_USERNAME}')
-        ],[
-            InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/imoviesmagic')
-        ],[
+            ],
+            [
+            InlineKeyboardButton('Join Group', url='http://t.me/+rULXdrxw5Pk5NTFl'),
+            InlineKeyboardButton('🔔 Updates Channel 🤖', url='https://t.me/imoviesmagic')
+            ],
+            [
+            InlineKeyboardButton('⚠️Join Backup Channel⚠️', url=f'http://t.me/{MOVIE_GROUP_USERNAME}')
+            ],
+            [
+            InlineKeyboardButton('Request Your Movies Here', url='http://t.me/iMovies_contact_bot')
+            ],
+            [
             InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
             InlineKeyboardButton('♥️ About ♥️', callback_data='about')
-        ],[
-            InlineKeyboardButton('Watch Tutorial', url='https://youtube.com/LazyDeveloper')
-        ]]
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        await query.answer('♥️ Thank You LazyDeveloper ♥️')
+        await query.answer('♥️ Piracy is a crime.Thank You LazyDeveloper ♥️')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
@@ -816,9 +820,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton(text=f"🔍 Search Here 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
             ],[
                 InlineKeyboardButton(text=f"🐞 REPORT BUG 🐞", url=f"https://telegram.me/imovies_discussion")
-            ],[
-                InlineKeyboardButton(text=f"⚡️ Learn Bot Making 🦋", url=f"https://youtube.com/@LazyDeveloperr")
-
             ]]
             btn_lzdv = [
                 [
@@ -844,8 +845,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton(text=f"🔍 Search Here 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
             ],[
                 InlineKeyboardButton(text=f"🐞 REPORT BUG 🐞", url=f"https://telegram.me/imovies_discussion")
-            ],[
-                InlineKeyboardButton(text=f"⚡️ Learn Bot Making 🦋", url=f"https://youtube.com/@LazyDeveloperr")
             ]]
             btn_lzdv = [
                 [
@@ -899,8 +898,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton(text=f"🔍 Search Here 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
             ],[
                 InlineKeyboardButton(text=f"🐞 REPORT BUG 🐞", url=f"https://telegram.me/imovies_discussion")
-            ],[
-                InlineKeyboardButton(text=f"⚡️ Learn Bot Making 🦋", url=f"https://youtube.com/@LazyDeveloperr")
             ]]
             btn_lzdv = [
                 [
@@ -926,9 +923,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton(text=f"🔍 Search Here 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
             ],[
                 InlineKeyboardButton(text=f"🐞 REPORT BUG 🐞", url=f"https://telegram.me/imovies_discussion")
-            ],[
-                InlineKeyboardButton(text=f"⚡️ Learn Bot Making 🦋", url=f"https://youtube.com/@LazyDeveloperr")
-
             ]]
             btn_lzdv = [
                 [
@@ -954,8 +948,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton(text=f"🔍 Search Here 🔎", url=f"https://telegram.me/{MOVIE_GROUP_USERNAME}")
             ],[
                 InlineKeyboardButton(text=f"🐞 REPORT BUG 🐞", url=f"https://telegram.me/imovies_discussion")
-            ],[
-                InlineKeyboardButton(text=f"⚡️ Learn Bot Making 🦋", url=f"https://youtube.com/@LazyDeveloperr")
             ]]
             btn_lzdv = [
                 [
