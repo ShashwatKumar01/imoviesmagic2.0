@@ -26,9 +26,6 @@ async def start(client, message):
                 InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/imoviesmagic')
             ],
             [
-                InlineKeyboardButton('🙆🏻 Help 🦾', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            ],
-            [
                 InlineKeyboardButton(text=DOWNLOAD_TEXT_NAME,url=DOWNLOAD_TEXT_URL)
             ]
             ]
@@ -44,14 +41,21 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
+        # InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat='')
         buttons = [[
             InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-            InlineKeyboardButton('Join Movie Group', url=f'http://t.me/{MOVIE_GROUP_USERNAME}')
-            ],[
-            InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/imoviesmagic')
-            ],[
+            ],
+            [
+            InlineKeyboardButton('Join Group', url='http://t.me/+rULXdrxw5Pk5NTFl'),
+            InlineKeyboardButton('🔔 Updates Channel 🤖', url='https://t.me/imoviesmagic')
+            ],
+            [
+            InlineKeyboardButton('⚠️Join Backup Channel⚠️', url=f'http://t.me/{MOVIE_GROUP_USERNAME}')
+            ],
+            [
+            InlineKeyboardButton('Request Your Movies Here', url='http://t.me/iMovies_contact_bot')
+            ],
+            [
             InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
             InlineKeyboardButton('♥️ About ♥️', callback_data='about')
             ]]
@@ -99,15 +103,21 @@ async def start(client, message):
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
             InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-            InlineKeyboardButton('Join Movie Group', url=f'http://t.me/{MOVIE_GROUP_USERNAME}')
-            ],[
-            InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/imoviesmagic')
-            ],[
+            ],
+            [
+            InlineKeyboardButton('Join Group', url='http://t.me/+rULXdrxw5Pk5NTFl'),
+            InlineKeyboardButton('🔔 Updates Channel 🤖', url='https://t.me/imoviesmagic')
+            ],
+            [
+            InlineKeyboardButton('⚠️Join Backup Channel⚠️', url=f'http://t.me/{MOVIE_GROUP_USERNAME}')
+            ],
+            [
+            InlineKeyboardButton('Request Your Movies Here', url='http://t.me/iMovies_contact_bot')
+            ],
+            [
             InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
             InlineKeyboardButton('♥️ About ♥️', callback_data='about')
-        ]]
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
