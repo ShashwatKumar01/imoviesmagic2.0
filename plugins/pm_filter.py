@@ -1485,13 +1485,13 @@ async def auto_filter(client, msg, spoll=False):
     await waiting_message.delete()
     serve_message = await message.reply_text(f"🥰")
     fetching_message = await message.reply_text(f"Fetching details from server {full_name}...")
-    
+    ad_message= await message.reply_text(f"To avoid copyright issues your file is hidden behind a single page AD  ...")
 
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
     await serve_message.delete()
     await fetching_message.delete()
-    ad_message= await message.reply_text(f"To avoid copyright issues your file is hidden behind a single page AD  ...")
+    
     await asyncio.sleep(2)
     await ad_message.delete()
     # waiting overs here @LazyDeveloperr
