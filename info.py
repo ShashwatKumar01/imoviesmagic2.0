@@ -129,7 +129,7 @@ if SELF_DELETE == "True":
 
 # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "📥 HOW TO DOWNLOAD 📥"
-DOWNLOAD_TEXT_URL = "https://t.me/imoviesmagic"
+DOWNLOAD_TEXT_URL = "https://t.me/iMoviesmagic/36"
 
 # Custom Caption Under Button #
 CAPTION_BUTTON = "Get Updates"
