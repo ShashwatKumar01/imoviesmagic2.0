@@ -1,6 +1,6 @@
 class script(object):
     START_TXT = """Hello {},
-Myself <a href=https://t.me/{}>{}</a>,\n\nJUST SEND ME THE NAME OF THE MOVIE  \n\n Join the Group for Better Search Result....🤪"""
+Myself <a href=https://t.me/{}>{}</a>,\n\n<b>SEND ME THE NAME OF A MOVIE AND SEE MAGIC</b>  \n\nJoin Group for Better Search Result from Multiple bots..🤪\nAlso try @imoviestestbot"""
     LZTHMB_TEXT = """Hello {},
 Glad to see you here. It seems that you really love <a href=https://t.me/LazyDeveloperr >LazyDeveloper's</a> work.\n\n<b>Thumbnail extracting</b> feature will be available soon, please join <a href=https://t.me/LazyDeveloper>Dev Channel</a> and stay tuned for next <a href=https://t.me/LazyDeveloper>update</a>.\n\n  🐞 Report Bug here: <a href=http://t.me/LazyDeveloperSupport>LazyDev Support</a>
     """
