@@ -341,7 +341,7 @@ async def next_page(bot, query):
 
     btn.insert(0,
         [ 
-	    InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/imoviesmagic')
+	    InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url=DOWNLOAD_TEXT_URL)
         ] 
     )
 
@@ -687,7 +687,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⚠️Join Backup Channel⚠️', url=f'http://t.me/{MOVIE_GROUP_USERNAME}')
             ],
             [
-            InlineKeyboardButton('Request Your Movies Here', url='http://t.me/iMovies_contact_bot')
+            InlineKeyboardButton('Movie Unavailable! Request Here😊', url='http://t.me/iMovies_contact_bot')
             ],
             [
             InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
