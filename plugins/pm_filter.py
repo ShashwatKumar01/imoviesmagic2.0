@@ -635,8 +635,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     # protect_content=True if ident == "filep" else False 
                 # )
 		# d = await gg.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
-                await query.answer('Requested file has been sent to you privately. Check PM  ❤', show_alert=True)
+                await query.answer('Requested file has been sent to you privately. Check PM  ❤ Forward it to save the File', show_alert=True)
 		# await asyncio.sleep(300)
+		time.sleep(300)
                 await gg.delete()
 		    
         except UserIsBlocked:
@@ -1491,15 +1492,15 @@ async def auto_filter(client, msg, spoll=False):
     await waiting_message.delete()
     serve_message = await message.reply_text(f"🥰")
     fetching_message = await message.reply_text(f"Fetching details from server {full_name}...")
-    ad_message= await message.reply_text(f"To avoid copyright issues your file is hidden behind a single page AD  ...")
+    # ad_message= await message.reply_text(f"To avoid copyright issues your file is hidden behind a single page AD  ...")
 
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
     await serve_message.delete()
     await fetching_message.delete()
     
-    await asyncio.sleep(1)
-    await ad_message.delete()
+    # await asyncio.sleep(1)
+    # await ad_message.delete()
     # waiting overs here @LazyDeveloperr
 
     if imdb:
