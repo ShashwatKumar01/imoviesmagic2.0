@@ -625,14 +625,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 button = InlineKeyboardButton('▶ Gen Stream / Download Link', callback_data=f'generate_stream_link:{file_id}')
                 # Create the inline keyboard markup with the button
                 keyboard = InlineKeyboardMarkup([[button]])
-                await client.send_cached_media(
+                gg=await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
                     caption=f_caption,
                     reply_markup=keyboard,
                     protect_content=True if ident == "filep" else False 
                 )
+		d = await gg.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
                 await query.answer('Requested file has been sent to you privately. Check PM  ❤', show_alert=True)
+		await asyncio.sleep(300)
+                await gg.delete()
+		    
         except UserIsBlocked:
             await query.answer('☣Unblock the bot sweetie!', show_alert=True)
         except PeerIdInvalid:
