@@ -625,12 +625,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 button = InlineKeyboardButton('▶ Gen Stream / Download Link', callback_data=f'generate_stream_link:{file_id}')
                 # Create the inline keyboard markup with the button
                 keyboard = InlineKeyboardMarkup([[button]])
-                gg=await client.send_cached_media(
+                gg = await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
                     caption=f_caption,
                     reply_markup=keyboard,
-		    protect_content=False,)
+		    protect_content=False)
 		    
                     # protect_content=True if ident == "filep" else False 
                 # )
