@@ -1492,7 +1492,7 @@ async def auto_filter(client, msg, spoll=False):
     await serve_message.delete()
     await fetching_message.delete()
     
-    await asyncio.sleep(2)
+    await asyncio.sleep(1)
     await ad_message.delete()
     # waiting overs here @LazyDeveloperr
 
