@@ -636,7 +636,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 # )
 		# d = await gg.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
                 await query.answer('Requested file has been sent to you privately. Check PM  ❤', show_alert=True)
-		await asyncio.sleep(300)
+		# await asyncio.sleep(300)
                 await gg.delete()
 		    
         except UserIsBlocked:
