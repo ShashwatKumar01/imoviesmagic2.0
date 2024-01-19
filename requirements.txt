@@ -61,6 +61,7 @@ loggers
 filetype
 
 tldextract
+openai
 
 lk21
 
