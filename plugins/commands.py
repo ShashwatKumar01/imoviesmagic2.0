@@ -266,8 +266,8 @@ async def start(client, message):
                     f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
                 except:
                     return
-            k = await msg.edit_caption(f_caption)
-            await msg.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
+            await msg.edit_caption(f_caption)
+            k= await msg.reply('⚠ This file will be deleted within 5 minute, please forward it to your saved messages folder... ⚠')
             await asyncio.sleep(300)
             await msg.delete()
             await k.edit_text("<b>Your Query has been deleted !\n\nVisit our group & search again 👇</b>",
