@@ -266,7 +266,7 @@ async def next_page(bot, query):
                         [
                             InlineKeyboardButton(
                                 text=f"[{get_size(file.file_size)}] {file.file_name}", 
-                                url=f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}"
+                                url=await f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}"
                             ),
                         ]
                         for file in files
