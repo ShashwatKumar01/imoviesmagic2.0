@@ -995,7 +995,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                        ]
             reply_markup_lzdv = InlineKeyboardMarkup(btn_lzdv) 
             reply_markup = InlineKeyboardMarkup(btn)
-            await client.send_message(int(user_id), f"💞Hello  ! we have recieved your request for  `{movie}`... \n\nPlease keep some patience, we will upload it as soon as possible. \n\nTill that time you can search it on another bot @iMoviestestbot.Join Private group to use that bot\n\n❤ Thank u for your Love .❤", reply_markup=reply_markup)
+            await client.send_message(int(user_id), f"💞Hello  ! we have recieved your request for  `{movie}`... \n\nPlease keep some patience, we will upload it as soon as possible.n\n❤ Thank u for your Love .❤", reply_markup=reply_markup)
             await query.edit_message_text(text=f"- __**User notified successfully sweetie...✅**__\n\n⏳**Status** : Request Recieved 🖊.\n🪪**UserID** : `{user_id}`\n🎞**Content** : `{movie}`\n\n\n🦋",reply_markup=reply_markup_lzdv)
         # Delete callback query message
             await query.answer()
@@ -1314,9 +1314,9 @@ async def auto_filter(client, msg, spoll=False):
                                                                                                                                         [InlineKeyboardButton("❌Reject Req", callback_data=f"notify_user_req_rejected:{user_id}:{requested_movie}")]
                                                                                                                                         ]))
                 
-                l = await message.reply_text(text=f"△ 𝙷𝚎𝚢  `{message.from_user.first_name}` 😎,\n\nʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛ ʜᴀꜱ ʙᴇᴇɴ ꜱᴇɴᴛ ᴛᴏ ᴏᴜʀ **ᴀᴅᴍɪɴ'ꜱ ᴅᴀꜱʜʙᴏᴀʀᴅ** !\nᴘʟᴇᴀꜱᴇ ᴋᴇᴇᴘ ꜱᴏᴍᴇ ᴘᴀᴛɪᴇɴᴄᴇ !\nᴛʜᴇʏ ᴡɪʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴀꜱ ꜱᴏᴏɴ ᴀꜱ ᴘᴏꜱꜱɪʙʟᴇ.\n\n➟ 📝𝘾𝙤𝙣𝙩𝙚𝙣𝙩 𝙣𝙖𝙢𝙚 : `{search}`\n➟ 👮𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝘽𝙮 : `{message.from_user.first_name}`\n\n༺ You might get it on our another bot @iMoviestestbot.\nJoin Private Group to use that bot ༻\n\n🦋・‥☆𝘼𝘿𝙈𝙞𝙉 𝙨𝙪𝙥𝙥𝙤𝙧𝙩☆‥・🦋\n╰┈➤・☆ @{ADMIN_USRNM}",
+                l = await message.reply_text(text=f"△ 𝙷𝚎𝚢  `{message.from_user.first_name}` 😎,\n\nʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛ ʜᴀꜱ ʙᴇᴇɴ ꜱᴇɴᴛ ᴛᴏ ᴏᴜʀ **ᴀᴅᴍɪɴ'ꜱ ᴅᴀꜱʜʙᴏᴀʀᴅ** !\nᴘʟᴇᴀꜱᴇ ᴋᴇᴇᴘ ꜱᴏᴍᴇ ᴘᴀᴛɪᴇɴᴄᴇ !\nᴛʜᴇʏ ᴡɪʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴀꜱ ꜱᴏᴏɴ ᴀꜱ ᴘᴏꜱꜱɪʙʟᴇ.\n\n➟ 📝𝘾𝙤𝙣𝙩𝙚𝙣𝙩 𝙣𝙖𝙢𝙚 : `{search}`\n➟ 👮𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝘽𝙮 : `{message.from_user.first_name}`\n\n༺ You might get it on our another bot @tg_cinema_bot.\nJoin Private Group to use that bot ༻\n\n🦋・‥☆𝘼𝘿𝙈𝙞𝙉 𝙨𝙪𝙥𝙥𝙤𝙧𝙩☆‥・🦋\n╰┈➤・☆ @{ADMIN_USRNM}",
                                                                                                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("━ • │▌║  ᗩᗪᗪ ʍɛ 2 ᑌᖇ Ǥᖇᗝᑌᑭ  ║▌│ • ━", url=f'http://t.me/{temp.U_NAME}?startgroup=true')],[InlineKeyboardButton("✪ Join Group- ✪", url=f"https://t.me/{DEV_CHANNEL_USRNM}"), InlineKeyboardButton("✪ Main Channel ✪", url=f"https://t.me/{MAIN_CHANNEL_USRNM}")],[InlineKeyboardButton("╚»♥️ Thank You ♥️«╝", callback_data="close_data")]]))
-                await asyncio.sleep(60)
+                await asyncio.sleep(15)
                 await l.delete()    
                 if settings["spell_check"]:
                     return await advantage_spell_chok(msg)
@@ -1616,7 +1616,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("Hey  ! The requested content is currently unavailable in our database, have some patience 🙂 - our great admin will upload it as soon as possible\nYou might get that content on @iMoviestestbot \n\n               **or**\n\nDiscuss issue with admin here 👉  <a href='https://t.me/iMovies_contact_bot'>Discuss Here</a> ♥️ ")
+        k = await msg.reply("Hey  ! The requested content is currently unavailable in our database, have some patience 🙂 - our great admin will upload it as soon as possible\nYou might get that content on @tg_cinema_bot \n\n               **or**\n\nDiscuss issue with admin here 👉  <a href='https://t.me/iMovies_contact_bot'>Discuss Here</a> ♥️ ")
         await asyncio.sleep(10)
         await k.delete()
         return
@@ -1628,7 +1628,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("Hey , did you checked your spelling properly, here are some suggestions for you, please check if your requested content match anyone of these following suggestions\nYou might get that content on @iMoviestestbot...\n\n                 **or**\n\nDiscuss issue with admin here 👉 <a href='https://t.me/iMovies_contact_bot'>Discuss Here</a> ♥️ ",
+    await msg.reply("Hey , did you checked your spelling properly, here are some suggestions for you, please check if your requested content match anyone of these following suggestions\nYou might get that content on @tg_cinema_bot...\n\n                 **or**\n\nDiscuss issue with admin here 👉 <a href='https://t.me/iMovies_contact_bot'>Discuss Here</a> ♥️ ",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 
