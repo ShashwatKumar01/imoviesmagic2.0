@@ -48,14 +48,13 @@ async def start(client, message):
             [
             InlineKeyboardButton('Join Group', url='http://t.me/+rULXdrxw5Pk5NTFl'),
             InlineKeyboardButton('🔔 Updates Channel 🤖', url='https://t.me/imoviesmagic')
-            ],
-            [
-            InlineKeyboardButton('⚠️Join Backup Channel⚠️', url=f'http://t.me/{MOVIE_GROUP_USERNAME}')
-            ],
-            [
+            ],[
+            InlineKeyboardButton('🍿 Premium (Direct File) New Release', url='https://t.me/+vK_S4jupguo1MGVl')
+            ],[
+            InlineKeyboardButton('⚠️Join Backup', url=f'http://t.me/{MOVIE_GROUP_USERNAME}')
+            ],[
             InlineKeyboardButton('Movie Unavailable! Request Here😊', url='http://t.me/iMovies_contact_bot')
-            ],
-            [
+            ],[
             InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
             InlineKeyboardButton('♥️ About ♥️', callback_data='about'),
             InlineKeyboardButton('‼️ DMCA', url='https://telegra.ph/Copyright-iMoviesmagic-11-07')
@@ -115,6 +114,8 @@ async def start(client, message):
             [
             InlineKeyboardButton('Join Group', url='http://t.me/+rULXdrxw5Pk5NTFl'),
             InlineKeyboardButton('🔔 Updates Channel 🤖', url='https://t.me/imoviesmagic')
+            ],[
+            InlineKeyboardButton('🍿 Premium (Direct File) New Release', url='https://t.me/+vK_S4jupguo1MGVl')
             ],
             [
             InlineKeyboardButton('⚠️Join Backup Channel⚠️', url=f'http://t.me/{MOVIE_GROUP_USERNAME}')
