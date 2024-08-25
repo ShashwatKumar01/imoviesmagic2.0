@@ -697,6 +697,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             [
             InlineKeyboardButton('Join Group', url='http://t.me/+rULXdrxw5Pk5NTFl'),
             InlineKeyboardButton('🔔 Updates Channel 🤖', url='https://t.me/imoviesmagic')
+            ],[
+            InlineKeyboardButton('🍿 Premium (Direct File) New Release', url='https://t.me/+vK_S4jupguo1MGVl')
             ],
             [
             InlineKeyboardButton('⚠️Join Backup Channel⚠️', url=f'http://t.me/{MOVIE_GROUP_USERNAME}')
